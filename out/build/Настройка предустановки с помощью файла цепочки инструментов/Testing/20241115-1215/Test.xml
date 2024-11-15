@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20241115-1215-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.29.6"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Windows"
+	Hostname="LAPTOP-MH4I5POH"
+	OSRelease=" Personal"
+	OSVersion=" (Build 22631)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString=""
+	VendorID="Unknown Manufacturer"
+	FamilyID="0"
+	ModelID="0"
+	ProcessorCacheSize="0"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="22593"
+	TotalPhysicalMemory="16193"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2296"
+	>
+	<Testing>
+		<StartDateTime>Nov 15 19:15 Томск (зима)</StartDateTime>
+		<StartTestTime>1731672931</StartTestTime>
+		<TestList/>
+		<EndDateTime>Nov 15 19:15 Томск (зима)</EndDateTime>
+		<EndTestTime>1731672931</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

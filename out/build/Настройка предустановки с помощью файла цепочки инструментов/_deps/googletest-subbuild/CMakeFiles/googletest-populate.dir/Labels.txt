@@ -1,0 +1,14 @@
+# Target labels
+ googletest-populate
+# Source files and their labels
+D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/CMakeFiles/googletest-populate
+D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/CMakeFiles/googletest-populate.rule
+D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete.rule
+D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build.rule
+D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure.rule
+D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download.rule
+D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install.rule
+D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir.rule
+D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch.rule
+D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test.rule
+D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update.rule

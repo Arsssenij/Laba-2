@@ -1,0 +1,21 @@
+# ninja log v6
+3	200	7533761226211436	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	4364681be901097a
+3	200	7533761226211436	D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	4364681be901097a
+201	2775	7533761251966542	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	134eb087f0f8bd66
+201	2775	7533761251966542	D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	134eb087f0f8bd66
+2776	2963	7533761253842522	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	14a6dad0c27a06eb
+2776	2963	7533761253842522	D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	14a6dad0c27a06eb
+2964	3146	7533761255669300	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	11a2dfcbd1e099e2
+2964	3146	7533761255669300	D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	11a2dfcbd1e099e2
+3146	3341	7533761257623596	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	8d485b3c8f020eb0
+3146	3341	7533761257623596	D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	8d485b3c8f020eb0
+3342	3557	7533761259786143	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	1c9505154a12a1a
+3342	3557	7533761259786143	D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	1c9505154a12a1a
+3557	3744	7533761261629700	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	30ae9150d31167c9
+3557	3744	7533761261629700	D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	30ae9150d31167c9
+3744	3989	7533761264102956	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	e0abdd5a7bc4cd82
+3744	3989	7533761264102956	D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	e0abdd5a7bc4cd82
+3989	4240	7533761266613380	CMakeFiles/googletest-populate-complete	9ff7f9fc7dc6ad1d
+3989	4240	7533761266613380	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	9ff7f9fc7dc6ad1d
+3989	4240	7533761266613380	D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	9ff7f9fc7dc6ad1d
+3989	4240	7533761266613380	D:/univer/infa/Laba-2/out/build/Настройка предустановки с помощью файла цепочки инструментов/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	9ff7f9fc7dc6ad1d

@@ -1,0 +1,5 @@
+if(EXISTS "D:/univer/infa/Laba-2/build/gtests/tests[1]_tests.cmake")
+  include("D:/univer/infa/Laba-2/build/gtests/tests[1]_tests.cmake")
+else()
+  add_test(tests_NOT_BUILT tests_NOT_BUILT)
+endif()

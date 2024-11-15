@@ -1,0 +1,21 @@
+# ninja log v6
+4	198	7533763189540470	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	4596b7799b57e197
+4	198	7533763189540470	D:/univer/infa/Laba-2/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	4596b7799b57e197
+199	2722	7533763214773911	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	1c05a6034680b67d
+199	2722	7533763214773911	D:/univer/infa/Laba-2/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	1c05a6034680b67d
+2722	2904	7533763216576661	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	d26d55df4769e50f
+2722	2904	7533763216576661	D:/univer/infa/Laba-2/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	d26d55df4769e50f
+2905	3094	7533763218504382	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	bb4139db7695df78
+2905	3094	7533763218504382	D:/univer/infa/Laba-2/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	bb4139db7695df78
+3094	3291	7533763220460104	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	3637e80db947ae94
+3094	3291	7533763220460104	D:/univer/infa/Laba-2/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	3637e80db947ae94
+3291	3516	7533763222726460	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	1aa84e2daa8086a
+3291	3516	7533763222726460	D:/univer/infa/Laba-2/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	1aa84e2daa8086a
+3516	3699	7533763224550154	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	1df00a754b0ac26a
+3516	3699	7533763224550154	D:/univer/infa/Laba-2/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	1df00a754b0ac26a
+3699	3888	7533763226430001	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	4b03bce4eff04db2
+3699	3888	7533763226430001	D:/univer/infa/Laba-2/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	4b03bce4eff04db2
+3888	4148	7533763229036629	CMakeFiles/googletest-populate-complete	5e9bea8af083c30b
+3888	4148	7533763229036629	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	5e9bea8af083c30b
+3888	4148	7533763229036629	D:/univer/infa/Laba-2/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	5e9bea8af083c30b
+3888	4148	7533763229036629	D:/univer/infa/Laba-2/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	5e9bea8af083c30b
