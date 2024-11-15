@@ -1,129 +1,128 @@
-#include <cassert>
-#include <cstdlib>
+#include "ip_filter.h"
 #include <iostream>
-#include <string>
-#include <vector>
+#include <sstream>
+#include <fstream>
+#include <algorithm>
 
-// ("",  '.') -> [""]
-// ("11", '.') -> ["11"]
-// ("..", '.') -> ["", "", ""]
-// ("11.", '.') -> ["11", ""]
-// (".11", '.') -> ["", "11"]
-// ("11.22", '.') -> ["11", "22"]
-std::vector<std::string> split(const std::string &str, char d)
-{
-    std::vector<std::string> r;
+using namespace std;
 
-    std::string::size_type start = 0;
-    std::string::size_type stop = str.find_first_of(d);
-    while(stop != std::string::npos)
-    {
-        r.push_back(str.substr(start, stop - start));
+// Конструктор IPv4
+IPv4::IPv4(const string& ip_str) {
+    stringstream ss(ip_str);
+    string temp;
 
-        start = stop + 1;
-        stop = str.find_first_of(d, start);
-    }
-
-    r.push_back(str.substr(start));
-
-    return r;
+    getline(ss, temp, '.'); 
+    n1 = stoi(temp);
+    getline(ss, temp, '.'); 
+    n2 = stoi(temp);
+    getline(ss, temp, '.'); 
+    n3 = stoi(temp);
+    getline(ss, temp, '.'); 
+    n4 = stoi(temp);
 }
 
-int main(int argc, char const *argv[])
-{
-    try
-    {
-        std::vector<std::vector<std::string> > ip_pool;
-
-        for(std::string line; std::getline(std::cin, line);)
-        {
-            std::vector<std::string> v = split(line, '\t');
-            ip_pool.push_back(split(v.at(0), '.'));
-        }
-
-        // TODO reverse lexicographically sort
-
-        for(std::vector<std::vector<std::string> >::const_iterator ip = ip_pool.cbegin(); ip != ip_pool.cend(); ++ip)
-        {
-            for(std::vector<std::string>::const_iterator ip_part = ip->cbegin(); ip_part != ip->cend(); ++ip_part)
-            {
-                if (ip_part != ip->cbegin())
-                {
-                    std::cout << ".";
-
-                }
-                std::cout << *ip_part;
-            }
-            std::cout << std::endl;
-        }
-
-        // 222.173.235.246
-        // 222.130.177.64
-        // 222.82.198.61
-        // ...
-        // 1.70.44.170
-        // 1.29.168.152
-        // 1.1.234.8
-
-        // TODO filter by first byte and output
-        // ip = filter(1)
-
-        // 1.231.69.33
-        // 1.87.203.225
-        // 1.70.44.170
-        // 1.29.168.152
-        // 1.1.234.8
-
-        // TODO filter by first and second bytes and output
-        // ip = filter(46, 70)
-
-        // 46.70.225.39
-        // 46.70.147.26
-        // 46.70.113.73
-        // 46.70.29.76
-
-        // TODO filter by any byte and output
-        // ip = filter_any(46)
-
-        // 186.204.34.46
-        // 186.46.222.194
-        // 185.46.87.231
-        // 185.46.86.132
-        // 185.46.86.131
-        // 185.46.86.131
-        // 185.46.86.22
-        // 185.46.85.204
-        // 185.46.85.78
-        // 68.46.218.208
-        // 46.251.197.23
-        // 46.223.254.56
-        // 46.223.254.56
-        // 46.182.19.219
-        // 46.161.63.66
-        // 46.161.61.51
-        // 46.161.60.92
-        // 46.161.60.35
-        // 46.161.58.202
-        // 46.161.56.241
-        // 46.161.56.203
-        // 46.161.56.174
-        // 46.161.56.106
-        // 46.161.56.106
-        // 46.101.163.119
-        // 46.101.127.145
-        // 46.70.225.39
-        // 46.70.147.26
-        // 46.70.113.73
-        // 46.70.29.76
-        // 46.55.46.98
-        // 46.49.43.85
-        // 39.46.86.85
-        // 5.189.203.46
+// Оператор сравнения IPv4
+bool operator<(const IPv4& lhs, const IPv4& rhs) {
+    if (lhs.n1 != rhs.n1) {
+        return lhs.n1 < rhs.n1;
     }
-    catch(const std::exception &e)
-    {
-        std::cerr << e.what() << std::endl;
+    if (lhs.n2 != rhs.n2) {
+        return lhs.n2 < rhs.n2;
     }
+    if (lhs.n3 != rhs.n3) {
+        return lhs.n3 < rhs.n3;
+    }
+    return lhs.n4 < rhs.n4;
+}
+
+// Функция для чтения IPv4-адресов из файла
+vector<IPv4> read_ip_addresses(const string& filename) {
+    vector<IPv4> ip_addresses;
+    ifstream file(filename);
+
+    if (!file.is_open()) {
+        cerr << "Ошибка открытия файла " << filename << endl;
+        return ip_addresses;
+    }
+
+    string line;
+    while (getline(file, line)) {
+        stringstream ss(line);
+        string ip_str;
+        getline(ss, ip_str, '\t');
+        ip_addresses.push_back(IPv4(ip_str));
+    }
+
+    file.close();
+    return ip_addresses;
+}
+
+// Функция для вывода списка IPv4-адресов
+void print_ip_addresses(const vector<IPv4>& ip_addresses) {
+    for (const auto& ip : ip_addresses) {
+        cout << static_cast<int>(ip.n1) << "." << static_cast<int>(ip.n2)
+             << "." << static_cast<int>(ip.n3) << "." << static_cast<int>(ip.n4)
+             << endl;
+    }
+}
+
+// Функция для вывода адресов с первым байтом 1
+void print_addresses_with_first_byte_1(const vector<IPv4>& ip_addresses) {
+    cout<<"Список адресов с первым байтом 1:"<<endl;
+    for (const auto& ip : ip_addresses) {
+        if (ip.n1 == 1) {
+            cout << static_cast<int>(ip.n1) << "." << static_cast<int>(ip.n2)
+                 << "." << static_cast<int>(ip.n3) << "." << static_cast<int>(ip.n4)
+                 << endl;
+        }
+    }
+}
+
+// Функция для вывода адресов с первым байтом 46 и вторым 70
+void print_addresses_with_first_byte_46_and_second_byte_70(const vector<IPv4>& ip_addresses) {
+    cout<<"Список адресов с первым байтом 46 и вторым 70: "<<endl;
+    for (const auto& ip : ip_addresses) {
+        if (ip.n1 == 46 && ip.n2 == 70) {
+            cout << static_cast<int>(ip.n1) << "." << static_cast<int>(ip.n2)
+                 << "." << static_cast<int>(ip.n3) << "." << static_cast<int>(ip.n4)
+                 << endl;
+        }
+    }
+}
+
+// Функция для вывода адресов, содержащих 46 в любом байте
+void print_addresses_with_46_in_any_byte(const vector<IPv4>& ip_addresses) {
+    cout<<"Вывод адресов, содержащих 46 в любом байте:"<<endl;
+    for (const auto& ip : ip_addresses) {
+        if (ip.n1 == 46 || ip.n2 == 46 || ip.n3 == 46 || ip.n4 == 46) {
+            cout << static_cast<int>(ip.n1) << "." << static_cast<int>(ip.n2)
+                 << "." << static_cast<int>(ip.n3) << "." << static_cast<int>(ip.n4)
+                 << endl;
+        }
+    }
+}
+
+int main() {
+    string filename = "C:\\labskazenkov\\lab2\\02\\ip_filter.tsv";
+    vector<IPv4> ip_addresses = read_ip_addresses(filename);
+
+    // Сортировка в обратном лексикографическом порядке
+    sort(ip_addresses.begin(), ip_addresses.end(), [](const IPv4& lhs, const IPv4& rhs) {
+        return rhs < lhs; // Обратный лексикографический порядок
+    });
+
+    // Вывод отсортированных адресов
+    cout << "Отсортированные адреса:" << endl;
+    print_ip_addresses(ip_addresses);
+
+    // Вывод адресов с первым байтом 1
+    print_addresses_with_first_byte_1(ip_addresses);
+
+    // Вывод адресов с первым байтом 46 и вторым 70
+    print_addresses_with_first_byte_46_and_second_byte_70(ip_addresses);
+
+    // Вывод адресов, содержащих 46 в любом байте
+    print_addresses_with_46_in_any_byte(ip_addresses);
 
     return 0;
 }
