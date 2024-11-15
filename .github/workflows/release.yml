@@ -74,6 +74,8 @@ jobs:
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }}
       # Строим проект с помощью CMake
       - run: cmake --build .
+      - name: Create Archive
+        run: zip -r laba2-0.0.${{ github.run_number }}-Darwin.zip build/
       # Запускаем тесты
       - name: Run Tests
         run: |
