@@ -103,7 +103,7 @@ void print_addresses_with_46_in_any_byte(const vector<IPv4>& ip_addresses) {
 }
 
 int main() {
-    string filename = "C:\\labskazenkov\\lab2\\02\\ip_filter.tsv";
+    string filename = "ip_filter.tsv";
     vector<IPv4> ip_addresses = read_ip_addresses(filename);
 
     // Сортировка в обратном лексикографическом порядке
