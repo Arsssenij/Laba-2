@@ -1,16 +1,14 @@
-
 cmake_minimum_required(VERSION 3.5.0) # Устанавливает минимальную версию CMake, необходимую для этого проекта.
 set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
-set(PROJECT_VESRION 0.0.${PATCH_VERSION})
-# Создает переменные PATCH_VERSION и PROJECT_VESRION для управления версиями проекта.
+set(PROJECT_VERSION 0.0.${PATCH_VERSION})
+# Создает переменные PATCH_VERSION и PROJECT_VERSION для управления версиями проекта.
 
-project(coollab2 VERSION ${PROJECT_VESRION}) # Определяет имя проекта coollab2 и использует переменную PROJECT_VESRION для указания версии проекта.
-# add_executable(coollab2 main.cpp cool.cpp cool.h)
+project(laba-2 VERSION ${PROJECT_VERSION}) # Определяет имя проекта laba-2 и использует переменную PROJECT_VESRION для указания версии проекта.
 
 set(CMAKE_CXX_STANDARD 17)
 set(CXX_STANDARD_REQUIRED ON)
 
-set(CPACK_PROJECT_NAME coollab2)
+set(CPACK_PROJECT_NAME laba-2)
 
 # Установка пакета DEB для Linux
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
